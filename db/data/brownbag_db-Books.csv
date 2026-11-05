@@ -1,0 +1,11 @@
+ID,title,description,author_ID
+b1c2d3e4-0001-4b00-8000-000000000001,Pride and Prejudice,A sharp-witted young woman and a proud gentleman misjudge each other in Regency England,a1b2c3d4-0001-4a00-8000-000000000001
+b1c2d3e4-0002-4b00-8000-000000000002,Emma,A wealthy matchmaker meddles in her neighbors' romances and misreads her own heart,a1b2c3d4-0001-4a00-8000-000000000001
+b1c2d3e4-0003-4b00-8000-000000000003,1984,A government clerk rebels against a totalitarian state that watches everyone,a1b2c3d4-0002-4a00-8000-000000000002
+b1c2d3e4-0004-4b00-8000-000000000004,Animal Farm,Farm animals overthrow their owner only to fall under a new tyranny,a1b2c3d4-0002-4a00-8000-000000000002
+b1c2d3e4-0005-4b00-8000-000000000005,Murder on the Orient Express,Hercule Poirot investigates a killing aboard a snowbound luxury train,a1b2c3d4-0003-4a00-8000-000000000003
+b1c2d3e4-0006-4b00-8000-000000000006,And Then There Were None,Ten strangers on an isolated island are killed off one at a time,a1b2c3d4-0003-4a00-8000-000000000003
+b1c2d3e4-0007-4b00-8000-000000000007,Noli Me Tangere,A young Filipino returns home and confronts colonial abuse and clerical power,a1b2c3d4-0004-4a00-8000-000000000004
+b1c2d3e4-0008-4b00-8000-000000000008,El Filibusterismo,A disguised jeweler plots revenge against the Spanish colonial order,a1b2c3d4-0004-4a00-8000-000000000004
+b1c2d3e4-0009-4b00-8000-000000000009,Things Fall Apart,An Igbo leader's world unravels with the arrival of European missionaries,a1b2c3d4-0005-4a00-8000-000000000005
+b1c2d3e4-0010-4b00-8000-000000000010,No Longer at Ease,A British-educated Nigerian civil servant is caught between duty and corruption,a1b2c3d4-0005-4a00-8000-000000000005

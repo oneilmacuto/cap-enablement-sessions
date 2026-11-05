@@ -1,0 +1,28 @@
+Starting CAP Project Generator...
+Using @sap/cds-dk [10.1.2] from /extbin/globals/bun/global/install/node_modules/@sap/cds-dk
+Using @sap/generator-cap-project [2.1.3] from [/extbin/globals/bun/global/install/node_modules/@sap/generator-cap-project]
+Using root path [/home/user/projects]
+
+Creating project with nodejs, tiny-sample
+
+Adding facet: nodejs
+Adding facet: tiny-sample
+
+Successfully initialized CAP project
+Continue with: code brownbag-project 
+
+
+Installing dependencies...
+
+added 72 packages, and audited 73 packages in 2s
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Finished installing dependencies
+
+Done setting up project brownbag-project
+Project is ready to use
+

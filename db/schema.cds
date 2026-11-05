@@ -8,7 +8,7 @@ entity Books : cuid, managed {
     author      : Association to Authors;
 };
 
-entity Authors : cuid, managed 
+entity Authors : cuid, managed {
     firstName     : String(100);
     lastName      : String(100);
     books         : Association to many Books on books.author = $self;

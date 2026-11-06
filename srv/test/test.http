@@ -1,0 +1,102 @@
+@baseUrl = http://localhost:4004/odata/v4/bookshop
+
+### Service document
+GET {{baseUrl}}/
+
+### Get all Authors
+GET {{baseUrl}}/Authors
+
+### Get all Authors and books
+GET {{baseUrl}}/Authors?$expand=books
+
+### Create an Author
+POST {{baseUrl}}/Authors
+Content-Type: application/json
+
+{
+  "ID": "d26b2c78-aff7-49d0-b362-23b56c7d98bc",
+  "firstName": "Oneil",
+  "lastName": "Macuto"
+}
+
+### Get Author by ID
+GET {{baseUrl}}/Authors(d26b2c78-aff7-49d0-b362-23b56c7d98bc)
+
+### Create a Book
+POST {{baseUrl}}/Books
+Content-Type: application/json
+
+{
+  "ID": "494fc30b-06fc-4702-a863-e10c69a47650",
+  "title": "Clean Code",
+  "description": "A handbook of agile software craftsmanship.",
+  "author_ID": "d26b2c78-aff7-49d0-b362-23b56c7d98bc"
+}
+
+### Get all Books
+GET {{baseUrl}}/Books
+
+### Get Books and expand Author
+GET {{baseUrl}}/Books?$expand=author
+
+### Get Book by ID
+GET {{baseUrl}}/Books(494fc30b-06fc-4702-a863-e10c69a47650)
+
+### Update Book title
+PATCH {{baseUrl}}/Books(494fc30b-06fc-4702-a863-e10c69a47650)
+Content-Type: application/json
+
+{
+  "title": "  Clean Code - Updated  "
+}
+
+### Validation test: missing title
+POST {{baseUrl}}/Books
+Content-Type: application/json
+
+{
+  "description": "This should fail when title validation is enabled.",
+  "author_ID": "d26b2c78-aff7-49d0-b362-23b56c7d98bc"
+}
+
+### Validation test: missing author
+POST {{baseUrl}}/Books
+Content-Type: application/json
+
+{
+  "title": "Book Without Author",
+  "description": "This should fail when author validation is enabled."
+}
+
+### Duplicate test: same title and author
+POST {{baseUrl}}/Books
+Content-Type: application/json
+
+{
+  "title": "Clean Code - Updated",
+  "description": "Duplicate test for the same author.",
+  "author_ID": "d26b2c78-aff7-49d0-b362-23b56c7d98bc"
+}
+
+### Delete Author while Books still exist
+DELETE {{baseUrl}}/Authors(a1b2c3d4-0001-4a00-8000-000000000001)
+
+### Delete Book
+DELETE {{baseUrl}}/Books(494fc30b-06fc-4702-a863-e10c69a47650)
+
+### Delete Author after Book is deleted
+DELETE {{baseUrl}}/Authors(d26b2c78-aff7-49d0-b362-23b56c7d98bc)
+
+# ------------------------------------------------------------
+# Optional requests for later exercises
+# Uncomment/use these after adding the corresponding CDS members.
+# ------------------------------------------------------------
+
+### Publish Book - requires bound action: Books.publish()
+# POST {{baseUrl}}/Books(494fc30b-06fc-4702-a863-e10c69a47650)/BookshopService.publish
+# Content-Type: application/json
+#
+# {}
+
+### Find Authors - requires function findAuthors(search: String)
+# GET {{baseUrl}}/findAuthors(search='Martin')
